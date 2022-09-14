@@ -18,26 +18,12 @@ public class central {
 		miColeccion.generarContraseñas();
 		miColeccion.mostrarContraseñas();*/
 		Scanner sc = new Scanner(System.in);
-		LocalDate mifecha = LocalDate.of(2022, 9, 8);
-		LocalDate mifecha2 = LocalDate.of(2022, 9, 6);
-		Tarea miTarea = new Tarea(
-				"Hacer compras",
-				"Ir al supermercado mañana a hacer compras",
-				1, mifecha);
-		miTarea.mostrarTarea();
-		
-		Tarea miTarea2 = new Tarea(
-				"Repuesto",
-				"Consultar repuesto del auto",
-				1, mifecha2);
-		miTarea2.completar();
-		miTarea2.mostrarTarea();
-		
-		Tarea miTarea3 = new Tarea(
-				"Cine",
-				"Ir al cine",
-				2, mifecha2);
-		miTarea3.mostrarTarea();
+		String palabra = sc.nextLine();
+		if (WordChecker.check_for_word(palabra.toLowerCase())) {
+			System.out.println("TRUE");
+		} else {
+			System.out.println("FALSE");
+		}
 	}
 
 }
